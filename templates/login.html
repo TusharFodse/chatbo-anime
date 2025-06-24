@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        form {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+    
+        form div {
+            margin-bottom: 20px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+    
+        input[type="email"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+    
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #0072ff;
+            outline: none;
+        }
+    
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0072ff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        button:hover {
+            background: #005bb5;
+        }
+    
+        .email, #chatbot {
+            margin-top: 10px;
+        }
+    
+    </style>
+    
+</head>
+
+<body>
+    <form action="/chatbot" method="POST">
+        <div>
+            <label for="chatBot">SelectChatbot</label>
+            <select name="chatbot" id="chatbot">
+                <option name="Gojo" value="Gojo">Gojo</option>
+                <option name="Naruto" value="Naruto">Naruto</option>
+                <option name="One Pice Luffy" value="One Pice Luffy">Luffy</option>
+                <option name="Custom" value="Custom">Custom</option>
+            </select>
+            <div class="email">
+                <label for="email">email</label>
+                <input id="email" type="email" name="email">
+            </div>
+            <div>
+                <label for="info">Enter your Role</label>
+                <input type="text" id="info" name="info" >
+            </div>
+            <div id="chatbot-info" style="display:none">
+                <label  for="chatbot-cust">Choose Your ChatBot</label>
+                <input id="chatbot-cust" name="chatbot-cust" type="text">
+                
+
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+        
+       
+        
+            
+        </div>
+        
+
+    </form>
+    
+</body>
+<script src="../static/Login.js"></script>
+</html>

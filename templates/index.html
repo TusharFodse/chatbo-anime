@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* WhatsApp style CSS */
+        body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #ece5dd;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+#chat-window {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto; /* Important for scrolling */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end; /* Messages appear at bottom */
+}
+
+#chat {
+    display: flex;
+    padding: 10px;
+    background: #ffffff;
+    border-top: 1px solid #ccc;
+    justify-content: flex-end;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    background: #25d366;
+    border: none;
+    padding: 0 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-message, .response {
+    max-width: 60%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 15px;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.response {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border: 1px solid #ddd;
+}
+
+      </style>
+</head>
+<body>
+    <div class="all-data">
+        <div id="chat-window">
+            
+        
+        </div>
+
+        
+       
+        <form id="chat">
+            <label for="message" class="message" >Enter Message</label>
+        <input id="message" name="message" type="text" placeholder="typeing..." required>
+        <button type="submit" class="material-icons">send</button>
+
+        </form>
+        
+      
+            <!-- <div class="responce">
+                
+            </div> -->
+            
+
+        </div>
+            
+        </div>
+        
+
+    </form>
+    
+</body>
+<script src="../static/chatbot.js"></script>
+
+</html>
